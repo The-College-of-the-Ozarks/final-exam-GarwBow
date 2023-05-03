@@ -3,7 +3,7 @@ DinnerEvent Class:
 There are no issues with this class.
 
 Documentation:
-
+This class uses arrays to define the entrees, sides, and dessert options. It then uses if statements to make sure the correct choices are inputted.
 @param
 @return
 
