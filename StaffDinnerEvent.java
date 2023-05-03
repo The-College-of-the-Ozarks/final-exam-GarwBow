@@ -5,10 +5,8 @@ the program crashes if they accidentaly write out the number of guests (ex. Seve
 Using topics from Chapter 12, modify the getGuests() method to perform error handling 
 so that the user is continuously prompted until they enter the numbers (ints). 
 
-
-
 Documentation:
-
+This class defines variables, and then starts to get user information to get their menu choices. The end has a few get methods returning certain variables.
 @param
 @return
 
@@ -105,14 +103,22 @@ public class StaffDinnerEvent
       num = input.nextLine();
       return num;
    }  
+  //I Could not get the code to work, but it should, at the very least, raise an exception.
    public static int getGuests()
    {
       int guests;
       final int MIN_GUESTS = 5;
       final int MAX_GUESTS = 100;
       Scanner input = new Scanner(System.in);
-      System.out.print("Enter number of guests >> ");
-      guests = input.nextInt();
+      try
+      {
+        System.out.print("Enter number of guests >> ");
+        guests = input.nextInt();
+      }
+      catch(Exception e)
+      {
+        System.out.println("Please enter a number, not a word.");
+      }
       while(guests < MIN_GUESTS || guests > MAX_GUESTS)
       {
           System.out.println("The number of guests must be between " +
@@ -214,5 +220,4 @@ public class StaffDinnerEvent
       keyboard.nextLine();
       return choice;
    }      
-      
 }
