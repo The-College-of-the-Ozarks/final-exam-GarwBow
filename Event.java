@@ -4,12 +4,12 @@ This class contains multiple typos and needs debugged. There are no logical issu
 besides the aforementioned typos.
 
 Documentation:
-
+This class defines the variables for multiple things. It then does multiple set and get methods for the variables.
 @param
 @return
 
 */
-class event
+class Event
 {
    public final static double HIGH_GUEST_PRICE = 35.00;
    public final static double LOW_GUEST_PRICE = 32.00;  
@@ -25,7 +25,7 @@ class event
    private int eventType;
    public Event()
    {
-      This("A000", 0);
+      this("A000", 0);
    } 
    public Event(String num, int guests)
    {
@@ -92,6 +92,7 @@ class event
       if(contactPhone.length() != VALID_LEN)
          contactPhone = INVALID_PHONE;
    }
+   }
    public void setEventType(int code)
    {
       if(code < EVENT_TYPES.length)
@@ -113,6 +114,5 @@ class event
       if(guests >= LARGE_EVENT)
          isLarge = true;
       return isLarge;
-   }
    }
 }
